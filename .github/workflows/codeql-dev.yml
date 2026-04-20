@@ -39,10 +39,10 @@ jobs:
         include-prerelease: true
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./eShopOnWeb.sln
 
     - name: Build
-      run: dotnet build --no-restore --configuration Release
+      run: dotnet build ./eShopOnWeb.sln --no-restore --configuration Release
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
